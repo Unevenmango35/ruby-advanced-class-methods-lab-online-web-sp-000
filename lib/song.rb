@@ -40,8 +40,10 @@ def self.alphabetical
    @@all.sort_by{|song| song.name}
 end
 
-def self.new_from_filename(w)
-  song.name = w.
+def self.new_from_filename(filename)
+  song = self.new
+  title = filename.split(" - ")
+  song.name = title[0]
   
 end
 
